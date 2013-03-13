@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AIB Account Opening</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="open_account">Open your AIB Bank Account</string>
+    <string name="document_warning">To begin please confirm that you have both of the following documents</string>
+    <string name="poi">Proof of Idenity</string>
+    <string name="poa">Proof of Address</string>
+    <string name="poi_example">e.g. your passport or drivers license</string>
+    <string name="poa_example">e.g. a utility bill, phone bill</string>
+    <string name="aib_logo">AIB Logo</string>
+    <string name="next">Next</string>
+    <string name="title_activity_account_type">Select the Account type</string>
+    <string name="account_type_title">Select the type of Account you wish to open</string>
+    <string name="personal_bank_account">Personal Bank Account</string>
+    <string name="student_bank_account">Student Bank Account</string>
+    <string name="terms_acceptance">Do you accept the Terms &amp; Conditions of this new Account Opening?</string>
+    <string name="terms_email">Would you like to receive the Terms &amp; Conditions of this account opening by Email?</string>
+    <string name="title_activity_start_photo_id">Take a photo of your ID</string>
+    <string name="step_one">Step 1: Take a photo of your ID</string>
+
+</resources>
