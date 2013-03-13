@@ -20,5 +20,10 @@
     <string name="terms_email">Would you like to receive the Terms &amp; Conditions of this account opening by Email?</string>
     <string name="title_activity_start_photo_id">Take a photo of your ID</string>
     <string name="step_one">Step 1: Take a photo of your ID</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="cannot">cannot</string>
+    <string name="album_name">OCR</string>
+    <string name="title_activity_end_photo_id">Confirm Your Details</string>
+    <string name="title_activity_photo_ocr">Please Wait</string>
 
 </resources>

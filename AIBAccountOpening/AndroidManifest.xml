@@ -39,6 +39,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ie.aib.aibaccountopening.AccountType" />
         </activity>
+        <activity
+            android:name="ie.aib.aibaccountopening.EndPhotoID"
+            android:label="@string/title_activity_end_photo_id"
+            android:parentActivityName="ie.aib.aibaccountopening.StartPhotoID" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ie.aib.aibaccountopening.StartPhotoID" />
+        </activity>
+        <activity
+            android:name="ie.aib.aibaccountopening.PhotoOCR"
+            android:label="@string/title_activity_photo_ocr"
+            android:parentActivityName="ie.aib.aibaccountopening.StartPhotoID" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ie.aib.aibaccountopening.StartPhotoID" />
+        </activity>
     </application>
 
 </manifest>
