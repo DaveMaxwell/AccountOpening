@@ -24,6 +24,19 @@
     <string name="cannot">cannot</string>
     <string name="album_name">OCR</string>
     <string name="title_activity_end_photo_id">Confirm Your Details</string>
-    <string name="title_activity_photo_ocr">Please Wait</string>
+    <string name="title_activity_photo_ocr">Please Wait, Scanning Photo</string>
+    <string name="title_activity_start_address">Take a photo of your proof of address</string>
+    <string name="step_three">Step 3: Take a photo of your proof of address</string>
+    <string name="step_two">Step 2: Confirm your details</string>
+    <string name="title_activity_address_ocr">Please Wait, Scanning Photo</string>
+    <string name="title_activity_end_address">Confirm your address</string>
+    <string name="step_four">Step 4: Confirm your address</string>
+    <string name="title_activity_signature">Signature</string>
+    <string name="step_five">Last step: Signature</string>
+    <string name="terms_internetbanking">Would you like to sign up to internet banking?</string>
+    <string name="terms_debitcard">Would you like an AIB Debit Card?</string>
+    <string name="title_activity_complete">Complete</string>
+    <string name="complete">Thank you. Your new bank account will be opened shortly</string>
+    <string name="exit">Exit</string>
 
 </resources>

@@ -1,32 +1,32 @@
 package ie.aib.aibaccountopening;
 
-
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
-import android.os.Build;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.Environment;
-import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.support.v4.app.NavUtils;
 
-public class StartPhotoID extends Activity {
+public class StartAddress extends Activity {
 	
 	private static final int ACTION_TAKE_PHOTO_B = 1;
 
@@ -42,14 +42,13 @@ public class StartPhotoID extends Activity {
 
 	private AlbumStorageDirFactory mAlbumStorageDirFactory = null;
 
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.start_photo_id);
+		setContentView(R.layout.start_address);
 		// Show the Up button in the action bar.
 		setupActionBar();
-		
+
 		mImageView = (ImageView) findViewById(R.id.imageView1);
 		mImageBitmap = null;
 
@@ -66,7 +65,6 @@ public class StartPhotoID extends Activity {
 			mAlbumStorageDirFactory = new BaseAlbumDirFactory();
 		}
 		
-		
 	}
 
 	/**
@@ -81,7 +79,7 @@ public class StartPhotoID extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.start_photo_id, menu);
+		getMenuInflater().inflate(R.menu.start_address, menu);
 		return true;
 	}
 
@@ -242,8 +240,8 @@ public class StartPhotoID extends Activity {
 			case ACTION_TAKE_PHOTO_B: {
 				if (resultCode == RESULT_OK) {
 					handleBigCameraPhoto();
-		            Intent openAccountType = new Intent(StartPhotoID.this,PhotoOCR.class);
-		            StartPhotoID.this.startActivity(openAccountType);
+		            Intent openAccountType = new Intent(StartAddress.this,AddressOCR.class);
+		            StartAddress.this.startActivity(openAccountType);
 				}
 				break;
 			} // ACTION_TAKE_PHOTO_B
@@ -291,6 +289,5 @@ public class StartPhotoID extends Activity {
 			btn.setClickable(false);
 		}
 	}	
-
 
 }

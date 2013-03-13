@@ -17,7 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
 
-public class PhotoOCR extends Activity {
+public class AddressOCR extends Activity {
 
 	TextView tv;
 	String photoPath;
@@ -104,7 +104,7 @@ public class PhotoOCR extends Activity {
 				
 				String filePath = photoPath;
 				
-				String outputFile = "/sdcard/photoIDresult.txt";
+				String outputFile = "/sdcard/addressresult.txt";
 				String language = "English"; // Comma-separated list: Japanese,English or German,French,Spanish etc.
 				
 				ProcessingSettings settings = new ProcessingSettings();
@@ -135,14 +135,14 @@ public class PhotoOCR extends Activity {
 				} else if( task.Status == Task.TaskStatus.NotEnoughCredits ) {
 					displayMessage( "Not enough credits to process task. Add more pages to your application's account." );
 					
-					Intent myIntent = new Intent(PhotoOCR.this, EndPhotoID.class);
-					PhotoOCR.this.startActivity(myIntent);
+					Intent myIntent = new Intent(AddressOCR.this, EndAddress.class);
+					AddressOCR.this.startActivity(myIntent);
 					
 				} else {
 					displayMessage( "Task failed" );
 					
-					Intent myIntent = new Intent(PhotoOCR.this, EndPhotoID.class);
-					PhotoOCR.this.startActivity(myIntent);
+					Intent myIntent = new Intent(AddressOCR.this, EndAddress.class);
+					AddressOCR.this.startActivity(myIntent);
 				}
 				
 				displayMessage( "Ready" );
@@ -161,16 +161,16 @@ public class PhotoOCR extends Activity {
 				//displayMessage( contents.toString() );
 				
 				//launch the Photo ID activity
-				Intent myIntent = new Intent(PhotoOCR.this, EndPhotoID.class);
-				PhotoOCR.this.startActivity(myIntent);
+				Intent myIntent = new Intent(AddressOCR.this, EndAddress.class);
+				AddressOCR.this.startActivity(myIntent);
 				
 				
 			} catch ( Exception e ) {
 				displayMessage( "Error: " + e.getMessage() );
 				
 				//launch next activity, could re-try as alternative..
-				Intent myIntent = new Intent(PhotoOCR.this, EndPhotoID.class);
-				PhotoOCR.this.startActivity(myIntent);
+				Intent myIntent = new Intent(AddressOCR.this, EndAddress.class);
+				AddressOCR.this.startActivity(myIntent);
 			}
 		}
 

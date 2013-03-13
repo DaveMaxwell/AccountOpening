@@ -1,3 +1,5 @@
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".EndPhotoID" >
+    tools:context=".EndAddress" >
 
     <Button
         android:id="@+id/btnStepFive"
@@ -23,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="@string/step_two"
+        android:text="@string/step_four"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
@@ -32,10 +34,10 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/stepTheeExplained"
         android:layout_below="@+id/stepTheeExplained"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="First Name"
-        android:inputType="textPersonName" />
+        android:hint="Building Name/Number"
+        android:inputType="textPostalAddress" />
 
     <EditText
         android:id="@+id/address2"
@@ -44,8 +46,8 @@
         android:layout_alignLeft="@+id/address1"
         android:layout_below="@+id/address1"
         android:ems="10"
-        android:hint="Surname"
-        android:inputType="textPersonName" >
+        android:hint="Street Name"
+        android:inputType="textPostalAddress" >
 
         <requestFocus />
     </EditText>
@@ -57,8 +59,8 @@
         android:layout_alignLeft="@+id/address2"
         android:layout_below="@+id/address2"
         android:ems="10"
-        android:hint="Date of Birth"
-        android:inputType="date" />
+        android:hint="Town"
+        android:inputType="textPostalAddress" />
 
     <AutoCompleteTextView
         android:id="@+id/address4"
@@ -67,6 +69,7 @@
         android:layout_alignLeft="@+id/address3"
         android:layout_below="@+id/address3"
         android:ems="10"
-        android:hint="Country of Birth" />
+        android:hint="Country"
+        android:text="Ireland" />
     
 </RelativeLayout>

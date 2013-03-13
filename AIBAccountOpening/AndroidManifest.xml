@@ -55,6 +55,46 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ie.aib.aibaccountopening.StartPhotoID" />
         </activity>
+        <activity
+            android:name="ie.aib.aibaccountopening.StartAddress"
+            android:label="@string/title_activity_start_address"
+            android:parentActivityName="ie.aib.aibaccountopening.EndPhotoID" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ie.aib.aibaccountopening.EndPhotoID" />
+        </activity>
+        <activity
+            android:name="ie.aib.aibaccountopening.AddressOCR"
+            android:label="@string/title_activity_address_ocr"
+            android:parentActivityName="ie.aib.aibaccountopening.StartAddress" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ie.aib.aibaccountopening.StartAddress" />
+        </activity>
+        <activity
+            android:name="ie.aib.aibaccountopening.EndAddress"
+            android:label="@string/title_activity_end_address"
+            android:parentActivityName="ie.aib.aibaccountopening.StartAddress" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ie.aib.aibaccountopening.StartAddress" />
+        </activity>
+        <activity
+            android:name="ie.aib.aibaccountopening.Signature"
+            android:label="@string/title_activity_signature"
+            android:parentActivityName="ie.aib.aibaccountopening.EndAddress" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ie.aib.aibaccountopening.EndAddress" />
+        </activity>
+        <activity
+            android:name="ie.aib.aibaccountopening.Complete"
+            android:label="@string/title_activity_complete"
+            android:parentActivityName="ie.aib.aibaccountopening.Signature" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ie.aib.aibaccountopening.Signature" />
+        </activity>
     </application>
 
 </manifest>

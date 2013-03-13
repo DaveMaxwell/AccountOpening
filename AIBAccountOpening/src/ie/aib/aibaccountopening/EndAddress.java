@@ -19,12 +19,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.support.v4.app.NavUtils;
 
-public class EndPhotoID extends Activity {
+public class EndAddress extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.end_photo_id);
+		setContentView(R.layout.end_address);
 		// Show the Up button in the action bar.
 		setupActionBar();
 		
@@ -33,29 +33,29 @@ public class EndPhotoID extends Activity {
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-            Intent openPhoto = new Intent(EndPhotoID.this,StartAddress.class);
+            Intent openPhoto = new Intent(EndAddress.this,Signature.class);
 
-            EndPhotoID.this.startActivity(openPhoto);
+            EndAddress.this.startActivity(openPhoto);
 
             }
 
         });
 		
-	    String surname;
-	    String firstName;
-	    String dateOfBirth;
-	    String countryOfBirth;
-	    String proofOfIdentityType;
-		
+	    String address1;
+	    String address2;
+	    String address3;
+	    String address4;
+	    String proofOfAddressType;
+
 	    
-	    EditText firstNameTxt = (EditText) findViewById(R.id.address1); 
-	    EditText surnameTxt = (EditText) findViewById(R.id.address2); 
-	    EditText dateOfBirthTxt = (EditText) findViewById(R.id.address3); 
+	    EditText address1Txt = (EditText) findViewById(R.id.address1); 
+	    EditText address2Txt = (EditText) findViewById(R.id.address2); 
+	    EditText address3Txt = (EditText) findViewById(R.id.address3); 
 	    AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.address4);
 	    
 		String text = null;
 		try {
-			text = readFile("/sdcard/photoIDresult.txt");
+			text = readFile("/sdcard/addressresult.txt");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -65,103 +65,7 @@ public class EndPhotoID extends Activity {
 		//Drivers license check, if it contains an issued on
 		if(text.contains("issued on")){
 			
-			//System.out.println(text);
-			
-			String word = "name(s)";
-			String last = "3.";
-			
-			int endIndex = 0;
-			int startIndex = 0;
-			
-			String characters = text.replaceAll("[^\\x00-\\x7F]", "");
-			System.out.println(characters);
-			
-		    for (int i = characters.length(); (i = characters.lastIndexOf(word, i - 1)) != -1; ) {
-		    	startIndex = i;
-			}
-		    
-		    for (int i = characters.length(); (i = characters.lastIndexOf(last, i - 1)) != -1; ) {
-				endIndex = i;
-			}
-			
-		    firstName = text.substring(startIndex, endIndex); 
-		    
-			System.out.println(firstName);
-			
 		}
-		
-		//Passport check, if it contains MRZ line then it must be a passport
-		if(text.contains("<<<<<")) {
-		proofOfIdentityType = "Passport";
-		
-		String word = "P<";
-		String last = "<<";
-		
-		int startIndex = 0;
-		int endIndex;
-		
-		for (int i = text.length(); (i = text.lastIndexOf(word, i - 1)) != -1; ) {
-			startIndex = i;
-		    
-		}
-	    int index = text.lastIndexOf(last);
-	    endIndex = index;
-	    
-	    //Extract only the MRZ line from the passport
-	    String MRZ = text.substring(startIndex, endIndex); 
-	    
-	    //Remove any possible spaces
-	    MRZ = MRZ.replace(" ", "");
-	    
-	    //System.out.println(MRZ);
-	    
-	    
-		for (int i = MRZ.length(); (i = MRZ.lastIndexOf(last, i - 1)) != -1; ) {
-			endIndex = i;
-		    
-		}
-	    
-	    surname = MRZ.substring(5, endIndex); 
-	    surnameTxt.setText(surname);
-
-	    startIndex = endIndex + 2;
-	    last = "<<<<";
-	    
-	    for (int i = MRZ.length(); (i = MRZ.lastIndexOf(last, i - 1)) != -1; ) {
-			endIndex = i;
-		}
-	    
-	    firstName = MRZ.substring(startIndex, endIndex); 
-	    firstNameTxt.setText(firstName);
-	    //System.out.println(firstName);
-	    
-	    for (int i = MRZ.length(); (i = MRZ.lastIndexOf(last, i - 1)) != -1; ) {
-			startIndex = i;
-		}
-	    endIndex = MRZ.length() - 1;
-	   
-	    String MRZLineTwo = MRZ.substring(startIndex, endIndex); 	
-	    
-	    //remove carriage returns and << from MRZ
-	    MRZLineTwo = MRZLineTwo.replace("<", "");
-	    MRZLineTwo = MRZLineTwo.replaceAll("[\n\r]", "");;
-	   
-	    
-	    dateOfBirth = MRZLineTwo.substring(13, 19); 
-	    
-
-	    String year = dateOfBirth.substring(0, 2); 
-	    String month = dateOfBirth.substring(2, 4);
-	    String day = dateOfBirth.substring(4, 6);
-	    
-	    dateOfBirth = day + "-" + month + "-" + year;
-	    dateOfBirthTxt.setText(dateOfBirth);
-	    
-	    countryOfBirth = MRZLineTwo.substring(10, 13); 
-	    textView.setText(countryOfBirth);
-		}
-	    
-	    //System.out.println(countryOfBirth);
 		
 		
 		Locale[] locales = Locale.getAvailableLocales();
@@ -186,7 +90,7 @@ public class EndPhotoID extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.end_photo_id, menu);
+		getMenuInflater().inflate(R.menu.end_address, menu);
 		return true;
 	}
 

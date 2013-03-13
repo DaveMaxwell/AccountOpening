@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".StartPhotoID" >
+    tools:context=".StartAddress" >
 
     <TextView
         android:id="@+id/stepThree"
@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:text="@string/step_one"
+        android:text="@string/step_three"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/stepThree"
         android:layout_below="@+id/stepThree"
-        android:text="@string/poi_example"
+        android:text="@string/poa_example"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <Button
