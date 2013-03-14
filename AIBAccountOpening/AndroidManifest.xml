@@ -5,8 +5,12 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="8"
         android:targetSdkVersion="17" />
+    
+    <uses-feature
+        android:name="android.hardware.camera"
+        />
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -94,6 +98,14 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ie.aib.aibaccountopening.Signature" />
+        </activity>
+        <activity
+            android:name="ie.aib.aibaccountopening.Start"
+            android:label="@string/title_activity_start"
+            android:parentActivityName="ie.aib.aibaccountopening.Main" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ie.aib.aibaccountopening.Main" />
         </activity>
     </application>
 

@@ -38,5 +38,6 @@
     <string name="title_activity_complete">Complete</string>
     <string name="complete">Thank you. Your new bank account will be opened shortly</string>
     <string name="exit">Exit</string>
+    <string name="title_activity_start">Get Started</string>
 
 </resources>
