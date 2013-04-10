@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/WizardPageContainer">
+    
+   <TextView style="@style/WizardPageTitle" />
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    	
+                        <TextView style="@style/WizardFormLabel"
+                android:text="@string/label_your_address1" />
+
+            <EditText android:id="@+id/your_address1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:saveEnabled="false"
+                android:inputType="textCapWords"
+                android:hint="@string/hint_your_address1"
+                android:layout_marginBottom="8dp" />
+            
+                                    <TextView style="@style/WizardFormLabel"
+                android:text="@string/label_your_address2" />
+
+            <EditText android:id="@+id/your_address2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:saveEnabled="false"
+                android:inputType="textCapWords"
+                android:hint="@string/hint_your_address2"
+                android:layout_marginBottom="8dp" />
+            
+                                    <TextView style="@style/WizardFormLabel"
+                android:text="@string/label_your_address3" />
+
+            <EditText android:id="@+id/your_address3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:saveEnabled="false"
+                android:inputType="textCapWords"
+                android:hint="@string/hint_your_address3"
+                android:layout_marginBottom="8dp" />
+            
+                                    <TextView style="@style/WizardFormLabel"
+                android:text="@string/label_your_address4" />
+
+            <EditText android:id="@+id/your_address4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:saveEnabled="false"
+                android:inputType="textCapWords"
+                android:hint="@string/hint_your_address4"
+                android:layout_marginBottom="8dp" />
+    
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

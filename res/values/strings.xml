@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2012 Roman Nurik
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<resources>
+
+    <string name="app_name">Account Opening</string>
+    <string name="next">Next</string>
+    <string name="prev">Previous</string>
+    <string name="finish">Open Account</string>
+    <string name="review">Review</string>
+    <string name="label_your_name">Name</string>
+    <string name="hint_your_name">e.g. Brian</string>
+    <string name="label_your_surname">Surname</string>
+    <string name="hint_your_surname">e.g. ODriscoll</string>
+    <string name="label_your_dob">Date of Birth</string>
+    <string name="hint_your_dob">e.g. 22-02-1980</string>
+    <string name="label_your_country">Country of Birth</string>
+    <string name="hint_your_country">e.g. Ireland</string>
+    <string name="label_your_address1">Address 1</string>
+    <string name="hint_your_address1">e.g. Number</string>
+    <string name="label_your_address2">Address 2</string>
+    <string name="hint_your_address2">e.g. Street Name</string>
+    <string name="label_your_address3">Address 3</string>
+    <string name="hint_your_address3">e.g. Town Name</string>
+    <string name="label_your_address4">Address 4</string>
+    <string name="hint_your_address4">e.g. Country Name</string>
+    <string name="submit_confirm_message">Do you want to upload your details? You will receive an letter confirming your account details.</string>
+    <string name="submit_confirm_button">Open my account</string>
+    <string name="cannot">cannot</string>
+    <string name="album_name">OCR</string>
+    <string name="btnTakePhoto">Take a photo of your ID</string>
+    <string name="btnBeginOcr">Proceed to the next step</string>
+    <string name="title_activity_photo">Take a photo of your ID</string>
+    <string name="title_activity_photo_ocr">Please wait..scanning photo</string>
+    <string name="hint_poi">Please have your passport or other form of proof of identity ready for the next step</string>
+    <string name="hint_poa">Please have your utility bill or other form of proof of address ready for the next step</string>
+    <string name="btnTakePhotoPOA">Take Proof of Address Photo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_ocr">Loading..</string>
+    <string name="title_activity_address">Photo your proof of address</string>
+    <string name="title_activity_address_ocr">Please wait..scanning photo</string>
+    <string name="close">Close</string>
+    <string name="examples_poi">You can use any of the following forms of ID:\nPassport\nDrivers License\nCollege ID</string>
+    <string name="examples_poa">You can use any of the following documents as your proof of address:\nUtility bill\nLetter from a government department\nBank statement</string>
+    <string name="loading">Please wait while we scan your photo</string>
+    <string name="title_activity_azure">Please wait..uploading your details</string>
+    <string name="add_textbox_hint">Add customers details</string>
+    <string name="add_button_text">Add</string>
+    <string name="screen_title">New Customer</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="checkbox_text">Item Text</string>
+    <string name="title_activity_complete">Application Complete</string>
+    <string name="complete">Thank you for opening your AIB Bank Account</string>
+    <string name="title_activity_to_do">Please wait..uploading your details</string>
+
+</resources>

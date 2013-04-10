@@ -1,8 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <item android:id="@+id/bexitMenuExit"
-      android:icon="@android:drawable/ic_menu_close_clear_cancel"
-      android:title="@string/exit"/>
-
-
-</menu>
